@@ -17,7 +17,8 @@
                 <td th:text="${record.item}"></td>
                 <td th:text="${#numbers.formatCurrency(record.revenue)}"></td>
                 <td th:text="${#numbers.formatCurrency(record.cost)}"></td>
-                <td th:text="${#numbers.formatCurrency(record.revenue - record.cost)}"></td>
+                <td th:text="${#numbers.formatCurrency(record.revenue - record.cost)}"
+                    th:style="${(record.revenue - record.cost) > 0 ? 'background: green' : 'background: red'}"></td>
             </tr>
         </table>
     </body>
