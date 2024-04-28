@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-
+import com.ltp.workbook.Employee;
 
 @Controller
 public class WorkbookController {
@@ -23,6 +23,8 @@ public class WorkbookController {
                 new Employee("Angela Martin", 35, "Accountant"),
                 new Employee("Dwight Schrute", 37, "Assistant to the Regional Manager")
         );
+
+        model.addAttribute("employees", employees);
 
         return "staff";
     }
